@@ -1,0 +1,235 @@
+body {
+    background-color: #fafafa;
+}
+
+.monospace_text {
+    font-family: monospace;
+}
+
+/*<Header>*/
+.header_icon {
+    width: 48px;
+    height: 48px;
+    background: url('images/main/icon.png');
+    background-size: 44px 44px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-radius: 2px;
+    margin: 32px;
+}
+
+.header_title.mdl-layout-title {
+    color: #ffffff;
+    font-family: monospace;
+}
+
+.header_banner {
+    height: 360px;
+    background: url('images/main/banner.png') center / cover;
+}
+/*</Header>*/
+
+/*<Footer>*/
+.footer {
+    background-color: #ffffff
+}
+/*</Footer>*/
+
+/*<Dialog>*/
+.close {
+}
+
+.profile_pic {
+    width: 128px;
+    height: 128px;
+    background: url('images/main/profile_pic.png');
+    background-size: 128px 128px;
+    margin: 0 auto;
+    border-radius: 64px;
+    margin-bottom: 32px;
+}
+/*</Dialog>*/
+
+/*Main Layout*/
+.layout {
+    max-width: 900px;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-shrink: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*<Camera Roll Card>*/
+.camera_roll_card.mdl-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 360px;
+    margin: 32px
+}
+.camera_roll_card > .mdl-card__title {
+    color: #FFFFFF;
+    height: 360px;
+    background: url('images/camera_roll/banner.png') center / cover;
+    background-color: #bdbdbd
+}
+/*</Camera Roll Card>*/
+
+/*<TODOList Card>*/
+.todolist_card.mdl-card {
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 360px;
+    margin: 32px
+}
+.todolist_card > .mdl-card__title {
+    color: #FFFFFF;
+    height: 360px;
+    background: url('images/todolist/banner.png') center / cover;
+    background-color: #E53935
+}
+/*</TODOList Card>*/
+
+/*<ISS Tracker Card>*/
+.iss_tracker_card.mdl-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 360px;
+    margin: 32px
+}
+.iss_tracker_card > .mdl-card__title {
+    color: #FFFFFF;
+    height: 360px;
+    background: url('images/iss_tracker/banner.png') center / cover;
+    background-color: #424242
+}
+/*</ISS Tracker Card>*/
+
+/*<Card Actions>*/
+.card_actions.mdl-card__actions {
+    min-height: 56px;
+}
+
+/*<Card Action Buttons>*/
+
+/*<GPlay Button>*/
+/*inspiration from http://muzei.co/ Gplay-Button*/
+.gplay_button {
+    display: block;
+    width: 99px;
+    height: 24px;
+    padding: 16px 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),
+        0 1px 1px 0 rgba(0,0,0,.14),
+        0 2px 1px -1px rgba(0,0,0,.12);
+    background-color: #000;
+    background-image: url('images/buttons/gplay.png');
+    background-repeat: no-repeat;
+    background-size: 99px 24px;
+    background-position: 50% 50%;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 100;
+    outline: 0;
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+}
+.gplay_button:hover{
+    background-color: #303030;
+    box-shadow:0 2px 4px -1px rgba(0,0,0,.2),
+        0 4px 5px 0 rgba(0,0,0,.14),
+        0 1px 10px 0 rgba(0,0,0,.12)
+}
+
+.gplay_button:active{
+    box-shadow:0 5px 5px -3px rgba(0,0,0,.2),
+        0 8px 10px 1px rgba(0,0,0,.14),
+        0 3px 14px 2px rgba(0,0,0,.12)
+}
+/*</GPlay Button>*/
+
+/*<GitHub Button>*/
+.github_button {
+    display: block;
+        width: 99px; /*140px 34px;*/
+        height: 24px;
+        padding: 16px 20px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+        background-color: #ffffff;
+        background-image: url('images/buttons/github.png');
+        background-repeat: no-repeat;
+        background-size: 99px 24px;
+        background-position: 50% 50%;
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        z-index: 100;
+        outline: 0;
+        margin: 0 auto;
+        margin-top: 16px;
+        margin-bottom: 16px;
+}
+.github_button:hover{
+    background-color: #eeeeee;
+    box-shadow:0 2px 4px -1px rgba(0,0,0,.2),
+        0 4px 5px 0 rgba(0,0,0,.14),
+        0 1px 10px 0 rgba(0,0,0,.12)
+}
+
+.github_button:active{
+    box-shadow:0 5px 5px -3px rgba(0,0,0,.2),
+        0 8px 10px 1px rgba(0,0,0,.14),
+        0 3px 14px 2px rgba(0,0,0,.12)
+}
+/*</GitHub Button>*/
+
+/*</Card Action Buttons>*/
+
+/*</Card Actions>*/
+
+/*<Contact Buttons>*/
+.footer-btn {
+    width: 32px;
+    height: 32px;
+    background-size: 30px 30px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    padding: 16px 0px;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 32px;
+}
+.footer-btn__gplus {
+    background-image: url('images/buttons/gplus_icon.png');
+}
+.footer-btn__github {
+    background-image: url('images/buttons/github_icon.png');
+}
+.footer-btn__info {
+    background-image: url('images/buttons/info_icon.png');
+}
+/*</Contact Buttons>*/

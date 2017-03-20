@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="This is my new Website">
+    <meta name="viewport" content="width=device-width">
+    <title>Lukas Koller</title>
+
+    <meta name="theme-color" content="#424242">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="/images/main/icon_192x192.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Lukas Koller">
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-amber.min.css"/>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Dialog polyfill-->
+    <link rel="stylesheet" type="text/css" href="dialog-polyfill.css" />
+</head>
+<body>
+<div class="page-content">
+
+    <div class="header_banner"></div>
+
+    <!--Main Layout-->
+    <div class="layout mdl-grid">
+
+        <!--Camera Roll Card-->
+        <div class="camera_roll_card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+            <!--Banner image-->
+            <div class="camera_roll_card mdl-card__title">
+                <h2 class="mdl-card__title-text">Camera Roll</h2>
+            </div>
+            <!--Actions-->
+            <div class="card_actions mdl-card__actions mdl-grid">
+                <!--Get-it-on-GPlay Button-->
+                <a class="gplay_button"
+                   href="https://play.google.com/store/apps/details?id=us.koller.cameraroll">&nbsp;</a>
+                <!--Github Button-->
+                <a class="github_button"
+                   href="https://github.com/kollerlukas/Camera-Roll-Android-App">&nbsp;</a>
+            </div>
+        </div>
+
+        <!--TODOList Card-->
+        <div class="todolist_card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+            <!--Banner image-->
+            <div class="todolist_card mdl-card__title">
+                <h2 class="mdl-card__title-text">TODOList</h2>
+            </div>
+            <!--Actions-->
+            <div class="card_actions mdl-card__actions mdl-grid">
+                <!--Get-it-on-GPlay Button-->
+                <a class="gplay_button"
+                   href="https://play.google.com/store/apps/details?id=us.koller.todolist">&nbsp;</a>
+                <!--Github Button-->
+                <a class="github_button"
+                   href="https://github.com/kollerlukas/TODOList-Android-App">&nbsp;</a>
+            </div>
+        </div>
+
+        <!--ISS Tracker Card-->
+        <div class="iss_tracker_card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+            <!--Banner image-->
+            <div class="iss_tracker_card mdl-card__title">
+                <h2 class="mdl-card__title-text">ISS Tracker</h2>
+            </div>
+            <!--Actions-->
+            <div class="card_actions mdl-card__actions mdl-grid">
+                <!--Get-it-on-GPlay Button-->
+                <a class="gplay_button"
+                   href="https://play.google.com/store/apps/details?id=edu.calpoly.isstracker">&nbsp;</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Contact Buttons-->
+    <footer class="footer mdl-mini-footer">
+        <div>
+            <a class="mdl-button mdl-js-button footer-btn footer-btn__gplus"
+               href="https://plus.google.com/+LukasKoller6">&nbsp;</a>
+            <a class="mdl-button mdl-js-button footer-btn footer-btn__github"
+               href="https://github.com/kollerlukas">&nbsp;</a>
+            <a class="mdl-button mdl-js-button footer-btn footer-btn__info"
+               >&nbsp;</a>
+
+            <!--Info Dialog-->
+            <dialog class="mdl-dialog">
+                <h4 class="mdl-dialog__title">About Me</h4>
+                <div class="mdl-dialog__content">
+                    <!--Profile Pic-->
+                    <div class="profile_pic"></div>
+
+                    Text
+                    <p class="monospace_text">
+                        Hi I'm Lukas Koller.
+                    </p>
+
+                    <p class="monospace_text">
+                        I live in Munich, Bavaria, Germany.
+                    </p>
+
+                    <p class="monospace_text">
+                        I like to develop Android Apps in my spare time.
+                    </p>
+
+                    <p class="monospace_text">
+                        Make sure to check them out!
+                    </p>
+                </div>
+                <div class="mdl-dialog__actions">
+                    <button type="button" class="mdl-button close">Ok</button>
+                </div>
+            </dialog>
+            <!--Dialog Polyfill script-->
+            <script src="dialog-polyfill.js"></script>
+            <script>
+                var dialog = document.querySelector('dialog');
+                var showDialogButton = document.querySelector('.footer-btn__info');
+                if (! dialog.showModal) {
+                    dialogPolyfill.registerDialog(dialog);
+                }
+                showDialogButton.addEventListener('click', function() {
+                    dialog.showModal();
+                });
+                dialog.querySelector('.close').addEventListener('click', function() {
+                    dialog.close();
+                });
+            </script>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
