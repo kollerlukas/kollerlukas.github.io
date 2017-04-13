@@ -1,34 +1,37 @@
 body {
-    background-color: #fafafa;
+    background-color: #f5f5f5;
 }
 
 .monospace_text {
     font-family: monospace;
 }
 
-/*<Header>*/
-.header_icon {
-    width: 48px;
-    height: 48px;
-    background: url('images/main/icon.png');
-    background-size: 44px 44px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border-radius: 2px;
-    margin: 32px;
+.header {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 25%;
+    top: 0;
+    background-color: #212121;
+    box-shadow: 0 1.5px 4px 0 rgba(0, 0, 0, 0.19), 0 1.5px 3px 0 rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fafafa;
 }
 
-.header_title.mdl-layout-title {
-    color: #ffffff;
-    font-family: monospace;
+.card {
+    width: 550px;
+    margin: 32px auto;
+    color: #212121;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.19), 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    overflow: auto;
 }
-
-.header_banner {
-    height: 360px;
-    background: url('images/main/banner.png') center / cover;
-}
-/*</Header>*/
 
 /*<Footer>*/
 .footer {
@@ -53,16 +56,10 @@ body {
 
 /*Main Layout*/
 .layout {
-    max-width: 900px;
-    padding: 0;
-    display: flex;
-    width: 100%;
+    max-width: 650px;
     margin: 0 auto;
-    flex-shrink: 0;
-    padding-top: 32px;
+    padding-top: 64px;
     padding-bottom: 32px;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
 }
 
 /*<Camera Roll Card>*/
@@ -73,6 +70,7 @@ body {
     min-height: 360px;
     margin: 32px
 }
+
 .camera_roll_card > .mdl-card__title {
     color: #FFFFFF;
     height: 360px;
