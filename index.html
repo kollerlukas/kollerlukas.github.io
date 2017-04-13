@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <!--Dialog polyfill-->
-    <link rel="stylesheet" type="text/css" href="dialog-polyfill.css" />
+    <link rel="stylesheet" type="text/css" href="dialog-polyfill.css"/>
 </head>
 <body>
 <div class="page-content">
@@ -86,50 +86,50 @@
             </div>
         </div>
     </div>
+</div>
 
+<!--Contact Buttons-->
+<footer class="footer mdl-mini-footer">
+    <div>
+        <a class="mdl-button mdl-js-button footer-btn footer-btn__gplus"
+           href="https://plus.google.com/+LukasKoller6">&nbsp;</a>
+        <a class="mdl-button mdl-js-button footer-btn footer-btn__github"
+           href="https://github.com/kollerlukas">&nbsp;</a>
+        <a class="mdl-button mdl-js-button footer-btn footer-btn__info"
+        >&nbsp;</a>
 
-    <!--Contact Buttons-->
-    <footer class="footer mdl-mini-footer">
-        <div>
-            <a class="mdl-button mdl-js-button footer-btn footer-btn__gplus"
-               href="https://plus.google.com/+LukasKoller6">&nbsp;</a>
-            <a class="mdl-button mdl-js-button footer-btn footer-btn__github"
-               href="https://github.com/kollerlukas">&nbsp;</a>
-            <a class="mdl-button mdl-js-button footer-btn footer-btn__info"
-               >&nbsp;</a>
+        <!--Info Dialog-->
+        <dialog class="mdl-dialog">
+            <h4 class="mdl-dialog__title">About Me</h4>
+            <div class="mdl-dialog__content">
+                <!--Profile Pic-->
+                <div class="profile_pic"></div>
 
-            <!--Info Dialog-->
-            <dialog class="mdl-dialog">
-                <h4 class="mdl-dialog__title">About Me</h4>
-                <div class="mdl-dialog__content">
-                    <!--Profile Pic-->
-                    <div class="profile_pic"></div>
+                Text
+                <p class="monospace_text">
+                    Hi I'm Lukas Koller.
+                </p>
 
-                    Text
-                    <p class="monospace_text">
-                        Hi I'm Lukas Koller.
-                    </p>
+                <p class="monospace_text">
+                    I live in Munich, Bavaria, Germany.
+                </p>
 
-                    <p class="monospace_text">
-                        I live in Munich, Bavaria, Germany.
-                    </p>
+                <p class="monospace_text">
+                    I like to develop Android Apps in my spare time.
+                </p>
 
-                    <p class="monospace_text">
-                        I like to develop Android Apps in my spare time.
-                    </p>
+                <p class="monospace_text">
+                    Make sure to check them out!
+                </p>
+            </div>
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button close">Ok</button>
+            </div>
+        </dialog>
 
-                    <p class="monospace_text">
-                        Make sure to check them out!
-                    </p>
-                </div>
-                <div class="mdl-dialog__actions">
-                    <button type="button" class="mdl-button close">Ok</button>
-                </div>
-            </dialog>
-
-            <!--Dialog Polyfill script-->
-            <script src="dialog-polyfill.js"></script>
-            <script>
+        <!--Dialog Polyfill script-->
+        <script src="dialog-polyfill.js"></script>
+        <script>
                 var dialog = document.querySelector('dialog');
                 var showDialogButton = document.querySelector('.footer-btn__info');
                 if (! dialog.showModal) {
@@ -141,9 +141,9 @@
                 dialog.querySelector('.close').addEventListener('click', function() {
                     dialog.close();
                 });
-            </script>
-        </div>
-    </footer>
-</div>
+
+        </script>
+    </div>
+</footer>
 </body>
 </html>
