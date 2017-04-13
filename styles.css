@@ -1,9 +1,8 @@
 body {
-    width: 100%;
     background-color: #f5f5f5;
 }
 
-.monospace_text {
+.monospace {
     font-family: monospace;
 }
 
@@ -13,7 +12,7 @@ body {
     width: 100%;
     height: 35%;
     top: 0;
-    background-color: #212121;
+    background-color: #fff;
     box-shadow: 0 1.5px 4px 0 rgba(0, 0, 0, 0.19), 0 1.5px 3px 0 rgba(0, 0, 0, 0.2);
 
     text-align: center;
@@ -21,7 +20,7 @@ body {
     line-height: 90px;
     font-size: 24px;
     font-weight: 300;
-    color: #fafafa;
+    color: #212121;
 }
 
 .card {
@@ -63,8 +62,7 @@ body {
     padding-bottom: 32px;
 }
 
-/*<Camera Roll Card>*/
-.camera_roll_card.mdl-card {
+.mdl-card {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -72,46 +70,22 @@ body {
     margin: 32px
 }
 
-.camera_roll_card > .mdl-card__title {
-    color: #FFFFFF;
-    height: 360px;
-    background: url('images/camera_roll/banner.png') center / cover;
-    background-color: #bdbdbd
+.card_title {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 300;
+    color: #212121;
 }
-/*</Camera Roll Card>*/
 
-/*<TODOList Card>*/
-.todolist_card.mdl-card {
-    min-height: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 360px;
-    margin: 32px
+.icon {
+    width: 128px;
+    height: 128px;
+    background-size: 128px 128px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 32px;
 }
-.todolist_card > .mdl-card__title {
-    color: #FFFFFF;
-    height: 360px;
-    background: url('images/todolist/banner.png') center / cover;
-    background-color: #E53935
-}
-/*</TODOList Card>*/
-
-/*<ISS Tracker Card>*/
-.iss_tracker_card.mdl-card {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 360px;
-    margin: 32px
-}
-.iss_tracker_card > .mdl-card__title {
-    color: #FFFFFF;
-    height: 360px;
-    background: url('images/iss_tracker/banner.png') center / cover;
-    background-color: #424242
-}
-/*</ISS Tracker Card>*/
 
 /*<Card Actions>*/
 .card_actions.mdl-card__actions {
@@ -144,7 +118,7 @@ body {
     z-index: 100;
     outline: 0;
     margin: 0 auto;
-    margin-top: 16px;
+    margin-top: 0px;
     margin-bottom: 16px;
 
 }
@@ -183,7 +157,7 @@ body {
         z-index: 100;
         outline: 0;
         margin: 0 auto;
-        margin-top: 16px;
+        margin-top: 0px;
         margin-bottom: 16px;
 }
 .github_button:hover{
