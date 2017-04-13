@@ -24,6 +24,7 @@ body {
 }
 
 .card {
+    width: 80%;
     max-width: 550px;
     margin: 32px auto;
     color: #212121;
@@ -56,8 +57,7 @@ body {
 
 /*Main Layout*/
 .layout {
-    max-width: 650px;
-    margin: 0 auto;
+    width: 100%;
     padding-top: 64px;
     padding-bottom: 32px;
 }
