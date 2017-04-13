@@ -1,4 +1,5 @@
 body {
+    width: 100%;
     background-color: #f5f5f5;
 }
 
@@ -58,12 +59,8 @@ body {
 
 /*Main Layout*/
 .layout {
-    width: 100%;
-    margin: 0 auto;
     padding-top: 64px;
     padding-bottom: 32px;
-    padding-left: 32px;
-    padding-right: 32px;
 }
 
 /*<Camera Roll Card>*/
@@ -225,13 +222,20 @@ body {
     cursor: pointer;
     border-radius: 32px;
 }
+
 .footer-btn__gplus {
     background-image: url('images/buttons/gplus_icon.png');
 }
+
 .footer-btn__github {
     background-image: url('images/buttons/github_icon.png');
 }
+
 .footer-btn__info {
-    background-image: url('images/buttons/info_icon.png');
+     background-image: url('images/buttons/info_icon.png');
+}
+
+.footer-btn__mail {
+    background-image: url('images/buttons/email_icon.png');
 }
 /*</Contact Buttons>*/
