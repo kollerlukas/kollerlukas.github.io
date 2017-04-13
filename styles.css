@@ -90,8 +90,6 @@ body {
     min-height: 56px;
 }
 
-/*<Card Action Buttons>*/
-
 /*<GPlay Button>*/
 /*inspiration from http://muzei.co/ Gplay-Button*/
 .gplay_button {
@@ -170,44 +168,3 @@ body {
         0 8px 10px 1px rgba(0,0,0,.14),
         0 3px 14px 2px rgba(0,0,0,.12)
 }
-/*</GitHub Button>*/
-
-/*</Card Action Buttons>*/
-
-/*</Card Actions>*/
-
-/*<Contact Buttons>*/
-.footer-btn {
-    width: 32px;
-    height: 32px;
-    background-size: 30px 30px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    padding: 16px 0px;
-    text-decoration: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    margin: 0 8px;
-    cursor: pointer;
-    border-radius: 32px;
-}
-
-.footer-btn__gplus {
-    background-image: url('images/buttons/gplus_icon.png');
-}
-
-.footer-btn__github {
-    background-image: url('images/buttons/github_icon.png');
-}
-
-.footer-btn__info {
-     background-image: url('images/buttons/info_icon.png');
-}
-
-.footer-btn__mail {
-    background-image: url('images/buttons/email_icon.png');
-}
-/*</Contact Buttons>*/
