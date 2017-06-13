@@ -33,11 +33,12 @@
         <!--About Card-->
         <div class="card">
             <!--icon-->
-            <img class="profile_pic" src="images/main/profile_pic.png">
+            <img class="profile_pic" src="fake.png" data-src="images/main/profile_pic.png">
             <!--Title-->
             <h2 class="card_title monospace">Lukas Koller</h2>
 
-            <h2 class="card_title monospace" style="font-size: 16px; color: #616161;">Android Developer <br/> from Munich, Bavaria, Germany</h2>
+            <h2 class="card_title monospace" style="font-size: 16px; color: #616161;">Android Developer <br/> from
+                Munich, Bavaria, Germany</h2>
         </div>
 
         <div>
@@ -47,7 +48,7 @@
         <!--Camera Roll Card-->
         <div class="card">
             <!--icon-->
-            <img class="icon" src="images/camera_roll/icon.png">
+            <img class="icon" src="fake.png" data-src="images/camera_roll/icon.png">
             <!--Title-->
             <h2 class="card_title monospace">Camera Roll</h2>
 
@@ -65,7 +66,7 @@
         <!--ISS Tracker Card-->
         <div class="card">
             <!--icon-->
-            <img class="icon" src="images/iss_tracker/icon.png">
+            <img class="icon" src="fake.png" data-src="images/iss_tracker/icon.png">
             <!--Title-->
             <h2 class="card_title monospace">ISS Tracker</h2>
 
@@ -83,7 +84,7 @@
         <!--TODOList Card-->
         <div class="card">
             <!--icon-->
-            <img class="icon" src="images/todolist/icon.png">
+            <img class="icon" src="fake.png" data-src="images/todolist/icon.png">
             <!--Title-->
             <h2 class="card_title monospace">TODOList</h2>
 
@@ -117,5 +118,18 @@
         </div>
     </div>
 </div>
+
+<!--defer image loading for performance-->
+<script>
+function init() {
+    var imgDefer = document.getElementsByTagName('img');
+    for (var i=0; i<imgDefer.length; i++) {
+        if(imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+        }
+    }
+}
+window.onload = init;
+</script>
 </body>
 </html>
