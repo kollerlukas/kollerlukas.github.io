@@ -1,135 +1,107 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="mdl-js">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="This is my new Website">
-    <meta name="viewport" content="width=device-width">
-    <title>Lukas Koller</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukas Koller Portfolio</title>
 
-    <meta name="theme-color" content="#E0E0E0">
+    <meta name="theme-color" content="#448AFF">
 
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="/images/main/icon_192x192.png">
+    <link rel="icon" sizes="192x192" href="/images/icon-192x192.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Lukas Koller">
     <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
 
+    <!--Material Design Lite + Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-amber.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css"/>
 
     <link rel="stylesheet" href="styles.css">
+
+    <!--Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 </head>
-<body>
-<div>
-    <div class="header monospace"></div>
+<body ng-app="LukasKollerApps">
+<div class="mld-layout mdl-js-layout">
+    <div class="header"></div>
 
     <!--Main Layout-->
-    <div class="layout">
+    <div class="mdl-card mdl-shadow--2dp"
+         style="padding-top: 32px; padding-bottom: 16px; width: 80%;max-width: 960px;margin: 32px auto 105px;"
+         ng-controller="appsController">
 
-        <!--About Card-->
-        <div class="card">
-            <!--icon-->
-            <img class="profile_pic" src="images/fake.png" data-src="images/main/profile_pic.png">
-            <!--Title-->
-            <h2 class="card_title monospace">Lukas Koller</h2>
-
-            <h2 class="card_title monospace" style="font-size: 16px; color: #616161;">Android Developer <br/> from
-                Munich, Bavaria, Germany</h2>
+        <!--icon-->
+        <img class="profile-pic" src="images/fake.png" data-src="images/profile-pic.png">
+        <!--Title-->
+        <h2 class="title">Lukas Koller</h2>
+        <h3 class="title" style="font-size: 16px; color: #616161;">Android Developer</h3>
+        <h3 class="title" style="font-size: 14px; color: #757575;">from Munich, Bavaria, Germany</h3>
+        <!--Buttons-->
+        <div style="margin: 8px" align="center">
+            <a class="mdl-button mdl-js-button mdl-button--icon" href="https://github.com/kollerlukas">
+                <img src="images/github-icon.svg">
+            </a>
+            <a class="mdl-button mdl-js-button mdl-button--icon" href="https://plus.google.com/+LukasKoller6">
+                <img src="images/google-plus-icon.svg">
+            </a>
+            <a class="mdl-button mdl-js-button mdl-button--icon" href="mailto:lukaskoller6@gmail.com">
+                <img src="images/email-icon.svg">
+            </a>
         </div>
 
-        <div>
-            <h1 class="card_title monospace" style="padding-top: 32px; font-size: 26px; color: #2196F3;">My Apps</h1>
-        </div>
+        <h1 class="title monospace" style="padding: 32px; font-size: 26px; color: #448AFF;">My Apps</h1>
 
-        <!--Camera Roll Card-->
-        <div class="card">
-            <!--icon-->
-            <img class="icon" src="images/fake.png" data-src="images/camera_roll/icon.png">
-            <!--Title-->
-            <h2 class="card_title monospace">Camera Roll</h2>
-
-            <!--Actions-->
-            <div class="card_actions mdl-card__actions mdl-grid">
-                <!--Get-it-on-GPlay Button-->
-                <a class="gplay_button"
-                   href="https://play.google.com/store/apps/details?id=us.koller.cameraroll">&nbsp;</a>
-                <!--Github Button-->
-                <a class="github_button"
-                   href="https://github.com/kollerlukas/Camera-Roll-Android-App">&nbsp;</a>
-            </div>
-        </div>
-
-        <!--ISS Tracker Card-->
-        <div class="card">
-            <!--icon-->
-            <img class="icon" src="images/fake.png" data-src="images/iss_tracker/icon.png">
-            <!--Title-->
-            <h2 class="card_title monospace">ISS Tracker</h2>
-
-            <!--Actions-->
-            <div class="card_actions mdl-card__actions mdl-grid">
-                <!--Get-it-on-GPlay Button-->
-                <a class="gplay_button"
-                   href="https://play.google.com/store/apps/details?id=edu.calpoly.isstracker">&nbsp;</a>
-                <!--Github Button-->
-                <a class="github_button"
-                   href="https://github.com/assumption/ISS-Tracker">&nbsp;</a>
-            </div>
-        </div>
-
-        <!--TODOList Card-->
-        <div class="card">
-            <!--icon-->
-            <img class="icon" src="images/fake.png" data-src="images/todolist/icon.png">
-            <!--Title-->
-            <h2 class="card_title monospace">TODOList</h2>
-
-            <!--Actions-->
-            <div class="card_actions mdl-card__actions mdl-grid">
-                <!--Get-it-on-GPlay Button-->
-                <a class="gplay_button"
-                   href="https://play.google.com/store/apps/details?id=us.koller.todolist">&nbsp;</a>
-                <!--Github Button-->
-                <a class="github_button"
-                   href="https://github.com/kollerlukas/TODOList-Android-App">&nbsp;</a>
-            </div>
-        </div>
-
-        <!--Contact Card-->
-        <div class="card">
-
-            <div style="margin: 16px">
-                <a class="mdl-button mdl-js-button footer-btn footer-btn__gplus"
-                   href="https://plus.google.com/+LukasKoller6">&nbsp;
-                </a>
-
-                <a class="mdl-button mdl-js-button footer-btn footer-btn__github"
-                   href="https://github.com/kollerlukas">&nbsp;
-                </a>
-
-                <a class="mdl-button mdl-js-button footer-btn footer-btn__mail"
-                   href="mailto:lukaskoller6@gmail.com">&nbsp;
-                </a>
+        <!--Apps Grid-->
+        <div class="mdl-grid" style="width: 80%">
+            <div ng-repeat="app in apps"
+                 class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone"
+                 style="background: url({{app.screenshot}}) center / cover;">
+                <div class="mdl-card__title mdl-card--expand"></div>
+                <a class="google-play-button" href={{app.gplaylink}}>&nbsp;</a>
             </div>
         </div>
     </div>
+
+    <!--Footer-->
+    <footer class="mdl-mini-footer"
+            style="position: fixed;bottom: 0;left: 0;right: 0;font-size: 13px;font-family: Roboto, monospace;background:#eee;">
+        <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+                <li><a href="privacy/privacy.html">Privacy and Terms</a></li>
+            </ul>
+        </div>
+    </footer>
 </div>
 
-<!--defer image loading for performance-->
+<!--js-->
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <script>
-function init() {
-    var imgDefer = document.getElementsByTagName('img');
-    for (var i=0; i<imgDefer.length; i++) {
-        if(imgDefer[i].getAttribute('data-src')) {
-            imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-        }
-    }
-}
-window.onload = init;
+    angular.module("LukasKollerApps", []).controller('appsController', ['$scope', function ($scope) {
+        $scope.apps = [
+            {
+                gplaylink: "https://play.google.com/store/apps/details?id=us.koller.cameraroll",
+                githublink: "https://github.com/kollerlukas/Camera-Roll-Android-App",
+                screenshot: "images/camera-roll-screenshot.webp"
+            },
+            {
+                gplaylink: "https://play.google.com/store/apps/details?id=us.koller.todolist",
+                githublink: "https://github.com/kollerlukas/TODOList-Android-App",
+                screenshot: "images/todolist-screenshot.webp"
+            },
+            {
+                gplaylink: "https://play.google.com/store/apps/details?id=edu.calpoly.isstracker",
+                githublink: "https://github.com/assumption/ISS-Tracker",
+                screenshot: "images/iss-tracker-screenshot.webp"
+            }
+        ];
+    }]);
 </script>
 </body>
 </html>

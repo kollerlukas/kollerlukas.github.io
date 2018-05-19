@@ -2,108 +2,46 @@ body {
     background-color: #f5f5f5;
 }
 
-.monospace {
-    font-family: 'Roboto Mono', monospace;
-    /*font-family: monospace;*/
-}
-
 .header {
     z-index: -1;
     position: fixed;
     width: 100%;
     height: 35%;
     top: 0;
-    background-color: #E0E0E0; /*424242*/
-    box-shadow: 0 1.5px 4px 0 rgba(0, 0, 0, 0.19), 0 1.5px 3px 0 rgba(21, 21, 21, 0.2);
-
-    text-align: center;
-    vertical-align: middle;
-    line-height: 90px;
-    font-size: 24px;
-    font-weight: 300;
-    color: #fff;
+    background-color: #448AFF;
 }
 
-.card {
-    width: 80%;
-    max-width: 550px;
-    margin: 32px auto;
-    color: #212121;
-    background-color: #fff;
-    border-radius: 3px;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.19), 0 2px 6px 0 rgba(21, 21, 21, 0.2);
-    overflow: auto;
-}
-
-/*<Footer>*/
-.footer {
-    width: 100%;
-    background-color: #ffffff
-}
-/*</Footer>*/
-
-.close {
-}
-
-.profile_pic {
+.profile-pic {
     width: 128px;
     height: 128px;
     background-size: 128px 128px;
     display: block;
-    margin: 0 auto;
     border-radius: 64px;
-    margin-top: 32px;
+    margin: 32px auto 0;
 }
 
-/*Main Layout*/
-.layout {
-    padding-top: 64px;
-    padding-bottom: 32px;
-}
-
-.mdl-card {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 360px;
-    margin: 32px
-}
-
-.card_title {
+.title {
     text-align: center;
     vertical-align: middle;
     font-size: 20px;
-    font-weight: 300;
     color: #212121;
-}
-
-.icon {
-    width: 128px;
-    height: 128px;
-    background-size: 128px 128px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 32px;
-}
-
-/*<Card Actions>*/
-.card_actions.mdl-card__actions {
-    min-height: 56px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 8px;
 }
 
 /*<GPlay Button>*/
 /*inspiration from http://muzei.co/ Gplay-Button*/
-.gplay_button {
+.google-play-button {
     display: block;
     width: 99px;
     height: 24px;
     padding: 16px 20px;
     border-radius: 4px;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),
-        0 1px 1px 0 rgba(0,0,0,.14),
-        0 2px 1px -1px rgba(0,0,0,.12);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2),
+    0 1px 1px 0 rgba(0, 0, 0, .14),
+    0 2px 1px -1px rgba(0, 0, 0, .12);
     background-color: #000;
-    background-image: url('images/buttons/gplay.png');
+    background-image: url('images/gplay.png');
     background-repeat: no-repeat;
     background-size: 99px 24px;
     background-position: 50% 50%;
@@ -114,95 +52,29 @@ body {
     user-select: none;
     z-index: 100;
     outline: 0;
-    margin: 0 auto;
-    margin-top: 0px;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
 
+    transition-property: box-shadow;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+    transition-delay: initial;
 }
-.gplay_button:hover{
+
+.google-play-button:hover {
     background-color: #303030;
-    box-shadow:0 2px 4px -1px rgba(0,0,0,.2),
-        0 4px 5px 0 rgba(0,0,0,.14),
-        0 1px 10px 0 rgba(0,0,0,.12)
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2),
+    0 4px 5px 0 rgba(0, 0, 0, .14),
+    0 1px 10px 0 rgba(0, 0, 0, .12)
 }
 
-.gplay_button:active{
-    box-shadow:0 5px 5px -3px rgba(0,0,0,.2),
-        0 8px 10px 1px rgba(0,0,0,.14),
-        0 3px 14px 2px rgba(0,0,0,.12)
-}
-/*</GPlay Button>*/
-
-/*<GitHub Button>*/
-.github_button {
-    display: block;
-        width: 99px; /*140px 34px;*/
-        height: 24px;
-        padding: 16px 20px;
-        border-radius: 4px;
-        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
-        background-color: #ffffff;
-        background-image: url('images/buttons/github.png');
-        background-repeat: no-repeat;
-        background-size: 99px 24px;
-        background-position: 50% 50%;
-        text-decoration: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        z-index: 100;
-        outline: 0;
-        margin: 0 auto;
-        margin-top: 0px;
-        margin-bottom: 16px;
-}
-.github_button:hover{
-    background-color: #eeeeee;
-    box-shadow:0 2px 4px -1px rgba(0,0,0,.2),
-        0 4px 5px 0 rgba(0,0,0,.14),
-        0 1px 10px 0 rgba(0,0,0,.12)
+.camera-roll-card.mdl-card {
+    background: url('images/camera-roll-screenshot.webp') center / cover;
 }
 
-.github_button:active{
-    box-shadow:0 5px 5px -3px rgba(0,0,0,.2),
-        0 8px 10px 1px rgba(0,0,0,.14),
-        0 3px 14px 2px rgba(0,0,0,.12)
-}
-/*</GitHub Button>*/
-
-/*<Contact Buttons>*/
-.footer-btn {
-    width: 32px;
-    height: 32px;
-    background-size: 30px 30px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    padding: 16px 0px;
-    text-decoration: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    margin: 0 8px;
-    cursor: pointer;
-    border-radius: 32px;
+.todolist-card.mdl-card {
+    background: url('images/todolist-screenshot.webp') center / cover;
 }
 
-.footer-btn__gplus {
-    background-image: url('images/buttons/gplus_icon.png');
+.iss-tracker-card.mdl-card {
+    background: url('images/iss-tracker-screenshot.webp') center / cover;
 }
-
-.footer-btn__github {
-    background-image: url('images/buttons/github_icon.png');
-}
-
-.footer-btn__info {
-     background-image: url('images/buttons/info_icon.png');
-}
-
-.footer-btn__mail {
-    background-image: url('images/buttons/email_icon.png');
-}
-/*</Contact Buttons>*/
