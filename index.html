@@ -27,6 +27,8 @@
     <!--Angular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
+    <!--GitHub Buttons-->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body ng-app="LukasKollerApps">
 <div class="mld-layout mdl-js-layout">
@@ -60,11 +62,30 @@
 
         <!--Apps Grid-->
         <div class="mdl-grid" style="width: 80%">
-            <div ng-repeat="app in apps"
-                 class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone"
+            <!--<div ng-repeat="app in apps"
+                 class="mdl-card mdl-shadow&#45;&#45;2dp mdl-cell mdl-cell&#45;&#45;4-col mdl-cell&#45;&#45;4-col-tablet mdl-cell&#45;&#45;4-col-phone"
                  style="background: url({{app.screenshot}}) center / cover;">
-                <div class="mdl-card__title mdl-card--expand"></div>
+                <div class="mdl-card__title mdl-card&#45;&#45;expand"></div>
                 <a class="google-play-button" href={{app.gplaylink}}>&nbsp;</a>
+            </div>-->
+            <div ng-repeat="app in apps" class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone"
+                 style="width: calc(100% - 32px); height: calc(100% - 32px);margin: 32px auto">
+                <h1 class="title monospace" style="padding: 8px; font-size: 20px;">{{app.name}}</h1>
+                <div class="mdl-card mdl-shadow--0dp"
+                     style="background: url({{app.screenshot}}) center / cover;width: 100%">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <a class="google-play-button" href={{app.gplaylink}}>&nbsp;</a>
+                </div>
+                <div style="padding: 8px;" align="right">
+                    <div style="padding-right: 8px;display: inline-block; *display: inline; zoom: 1; vertical-align: top;">
+                        <a class="github-button" href="{{app.githublink}}" data-size="large" data-show-count="true" aria-label="Star {{app.githubreponame}} on GitHub">Star</a>
+                    </div>
+                    <div style="display: inline-block; *display: inline; zoom: 1; vertical-align: top;">
+                        <a class="github-button" href="{{app.githublink}}/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork {{app.githubreponame}} on GitHub">Fork</a>
+                    </div>
+                </div>
+                <!-- Place this tag where you want the button to render. -->
+
             </div>
         </div>
     </div>
@@ -84,21 +105,28 @@
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <script>
     angular.module("LukasKollerApps", []).controller('appsController', ['$scope', function ($scope) {
+        // noinspection SpellCheckingInspection
         $scope.apps = [
             {
+                name: "Camera Roll",
                 gplaylink: "https://play.google.com/store/apps/details?id=us.koller.cameraroll",
                 githublink: "https://github.com/kollerlukas/Camera-Roll-Android-App",
-                screenshot: "images/camera-roll-screenshot.webp"
+                githubreponame: "kollerlukas/Camera-Roll-Android-App",
+                screenshot: "images/camera-roll-screenshot.png"
             },
             {
+                name: "TODOList",
                 gplaylink: "https://play.google.com/store/apps/details?id=us.koller.todolist",
                 githublink: "https://github.com/kollerlukas/TODOList-Android-App",
-                screenshot: "images/todolist-screenshot.webp"
+                githubreponame: "kollerlukas/TODOList-Android-App",
+                screenshot: "images/todolist-screenshot.png"
             },
             {
+                name: "ISS Tracker",
                 gplaylink: "https://play.google.com/store/apps/details?id=edu.calpoly.isstracker",
                 githublink: "https://github.com/assumption/ISS-Tracker",
-                screenshot: "images/iss-tracker-screenshot.webp"
+                githubreponame: "assumption/ISS-Tracker",
+                screenshot: "images/iss-tracker-screenshot.png"
             }
         ];
     }]);

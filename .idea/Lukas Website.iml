@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="material" level="application" />
     <orderEntry type="library" name="angular" level="application" />
+    <orderEntry type="library" name="buttons" level="application" />
   </component>
 </module>

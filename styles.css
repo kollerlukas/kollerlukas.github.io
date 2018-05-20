@@ -66,15 +66,3 @@ body {
     0 4px 5px 0 rgba(0, 0, 0, .14),
     0 1px 10px 0 rgba(0, 0, 0, .12)
 }
-
-.camera-roll-card.mdl-card {
-    background: url('images/camera-roll-screenshot.webp') center / cover;
-}
-
-.todolist-card.mdl-card {
-    background: url('images/todolist-screenshot.webp') center / cover;
-}
-
-.iss-tracker-card.mdl-card {
-    background: url('images/iss-tracker-screenshot.webp') center / cover;
-}
