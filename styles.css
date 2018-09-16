@@ -2,13 +2,13 @@ body {
     background-color: #f5f5f5;
 }
 
-.header {
-    z-index: -1;
-    position: fixed;
-    width: 100%;
-    height: 35%;
-    top: 0;
-    background-color: #448AFF;
+.title {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #212121;
+    font-family: 'Roboto Mono', monospace;
+    margin: 8px;
 }
 
 .profile-pic {
@@ -18,15 +18,40 @@ body {
     display: block;
     border-radius: 64px;
     margin: 32px auto 0;
+    /* shadow */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2),
+    0 1px 1px 0 rgba(0, 0, 0, .14),
+    0 2px 1px -1px rgba(0, 0, 0, .12);
 }
 
-.title {
-    text-align: center;
-    vertical-align: middle;
-    font-size: 20px;
-    color: #212121;
-    font-family: 'Roboto Mono', monospace;
+.link-icon {
+    width: 48px; 
+    height: 48px; 
     margin: 8px;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0;
+    /* for smooth hover animation */
+    transition-property: box-shadow;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+}
+
+.link-icon svg {
+    fill: #757575;
+    /* for smooth hover animation */
+    transition-property: box-shadow;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+}
+
+.link-icon svg:hover {
+    fill: #212121;
 }
 
 /*<GPlay Button>*/
@@ -53,7 +78,7 @@ body {
     z-index: 100;
     outline: 0;
     margin: 0 auto 16px;
-
+    /* for smooth hover animation */
     transition-property: box-shadow;
     transition-duration: 0.15s;
     transition-timing-function: ease;
@@ -62,7 +87,22 @@ body {
 
 .google-play-button:hover {
     background-color: #303030;
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2),
+    /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2),
     0 4px 5px 0 rgba(0, 0, 0, .14),
-    0 1px 10px 0 rgba(0, 0, 0, .12)
+    0 1px 10px 0 rgba(0, 0, 0, .12) */
+}
+
+.app-card {
+    border-radius: 4px;
+    /* for smooth hover animation */
+    transition-property: box-shadow;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+}
+
+.app-card:hover {
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, .2),
+    0 8px 10px 0 rgba(0, 0, 0, .14),
+    0 2px 20px 0 rgba(0, 0, 0, .12)
 }
