@@ -104,19 +104,20 @@ html, body {
 #privacy-terms-link {
     float: right;
     font-size: 12px;
-    color: #757575;
+    color: #424242;
     font-weight: bold;
     border-radius: 4px;
     padding: 4px;
     text-decoration: none;
     /* for smooth hover animation */
-    transition-property: background-color;
+    transition-property: color, background-color;
     transition-duration: 0.15s;
     transition-timing-function: ease;
     transition-delay: initial;
 }
 
 #privacy-terms-link:hover {
+    color: #212121;
     background-color: #E0E0E0;
 }
 

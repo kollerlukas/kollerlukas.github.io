@@ -7,15 +7,17 @@ html, body {
 
 #content {
     max-width: 1000px;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: auto;
 }
 
 h1, h2, h3 {
     font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
     color: #000000;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -32,6 +34,7 @@ h3 {
 }
 
 p {
-    color: #757575;
-    font-size: 14px;
+    color: #9E9E9E;
+    font-size: 12px;
+    font-weight: bold;
 }
