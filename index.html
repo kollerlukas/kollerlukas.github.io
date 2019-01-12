@@ -29,8 +29,7 @@
 </head>
 
 <body ng-app="LukasKollerApps">
-    <!--Main Layout-->
-    <main id="content" class="mld-layout mdl-js-layout" ng-controller="appsController">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
         <!--Profile Pic-->
         <img id="profile-pic" src="images/profile-pic/profile-pic.jpg">
         <!--Name/Title-->
@@ -57,12 +56,16 @@
                 </svg>
             </a>
         </div>
+    </header>
+    <!--Main Layout-->
+    <main id="content" class="mld-layout mdl-js-layout" ng-controller="appsController">
+
         <p id="text-apps-head">My Apps</p>
         <!--Apps Grid-->
         <div class="mdl-grid" style="padding-bottom: 50px;">
             <div ng-repeat="app in apps" class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
                 <a href="{{app.gplaylink}}" target="_blank">
-                    <div class="mdl-card mdl-shadow--2dp app-card" style="width: 90%; margin: 32px auto 8px; position: relative;">
+                    <div class="mdl-card mdl-shadow--2dp app-card" style="width: 90%; margin: 32px auto 8px; position: relative;background: transparent">
                         <img src="{{app.screenshot}}" style="width: 100%;" />
                     </div>
                 </a>
