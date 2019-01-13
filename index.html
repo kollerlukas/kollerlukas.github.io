@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="mdl-js">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -11,45 +11,51 @@
     <meta name="theme-color" content="#448AFF">
 
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="/images/icon-192x192.png">
+    <link rel="icon" sizes="192x192" href="images/icons/icon-192x192.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Lukas Koller">
-    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/icons/apple-touch-icon-precomposed.png">
 
-    <!--Material Design Lite + Google Fonts-->
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css">
-
+    <!-- Required styles for MDC Web -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <!-- styles -->
     <link rel="stylesheet" href="styles.css">
-
-    <!--Angular-->
+    <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
 <body ng-app="LukasKollerApps">
-    <header class="mdl-layout__header mdl-layout__header--transparent">
-        <!--Profile Pic-->
-        <img id="profile-pic" src="images/profile-pic/profile-pic.jpg">
-        <!--Name/Title-->
+    <!-- Toolbar -->
+    <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-toolbar--flexible" style="background-color: #f5f5f5;">
+        <!-- Profile Pic -->
+        <div class="mdc-toolbar__row">
+            <img id="profile-pic" src="images/profile-pic/profile-pic.jpg">
+        </div>
+        <!-- Name/Title -->
         <p id="text-name">Lukas Koller</p>
         <p id="text-desc">Android Dev<br>from Munich, Bavaria, Germany</p>
-        <!--Social Media Buttons-->
-        <div align="center">
-            <a class="link-button" href="https://github.com/kollerlukas" target="_blank">
+        <!-- Social Media Buttons -->
+        <div id="link-btns" style="margin: 0 auto 0">
+            <!-- GitHub Profile Button -->
+            <a class="link-btn" href="https://github.com/kollerlukas" target="_blank">
                 <!-- GitHub Svg icon -->
                 <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="black">
                     <path d="M12 2.24226C10.6868 2.24226 9.38642 2.50091 8.17317 3.00346C6.95991 3.50601 5.85752 4.2426 4.92893 5.17119C3.05357 7.04655 2 9.59009 2 12.2423C2 16.6623 4.87 20.4123 8.84 21.7423C9.34 21.8223 9.5 21.5123 9.5 21.2423C9.5 21.0123 9.5 20.3823 9.5 19.5523C6.73 20.1523 6.14 18.2123 6.14 18.2123C5.68 17.0523 5.03 16.7423 5.03 16.7423C4.12 16.1223 5.1 16.1423 5.1 16.1423C6.1 16.2123 6.63 17.1723 6.63 17.1723C7.5 18.6923 8.97 18.2423 9.54 18.0023C9.63 17.3523 9.89 16.9123 10.17 16.6623C7.95 16.4123 5.62 15.5523 5.62 11.7423C5.62 10.6323 6 9.74226 6.65 9.03226C6.55 8.78226 6.2 7.74226 6.75 6.39226C6.75 6.39226 7.59 6.12226 9.5 7.41226C10.29 7.19226 11.15 7.08226 12 7.08226C12.85 7.08226 13.71 7.19226 14.5 7.41226C16.41 6.12226 17.25 6.39226 17.25 6.39226C17.8 7.74226 17.45 8.78226 17.35 9.03226C18 9.74226 18.38 10.6323 18.38 11.7423C18.38 15.5623 16.04 16.4023 13.81 16.6523C14.17 16.9623 14.5 17.5723 14.5 18.5023C14.5 19.8423 14.5 20.9223 14.5 21.2423C14.5 21.5123 14.66 21.8323 15.17 21.7423C19.14 20.4023 22 16.6623 22 12.2423C22 10.929 21.7413 9.62868 21.2388 8.41542C20.7362 7.20217 19.9997 6.09977 19.0711 5.17119C18.1425 4.2426 17.0401 3.50601 15.8268 3.00346C14.6136 2.50091 13.3132 2.24226 12 2.24226V2.24226Z" />
                 </svg>
             </a>
-            <a class="link-button" href="https://plus.google.com/+LukasKoller6" target="_blank">
+            <!-- Google+ Profile Button -->
+            <a class="link-btn" href="https://plus.google.com/+LukasKoller6" target="_blank">
                 <!-- Google Plus Svg Icon -->
                 <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="black">
                     <path d="M23 11H21V9H19V11H17V13H19V15H21V13H23V11ZM8 11V13.4H12C11.8 14.4 10.8 16.4 8 16.4C5.6 16.4 3.7 14.4 3.7 12C3.7 9.6 5.6 7.6 8 7.6C9.4 7.6 10.3 8.2 10.8 8.7L12.7 6.9C11.5 5.7 9.9 5 8 5C4.1 5 1 8.1 1 12C1 15.9 4.1 19 8 19C12 19 14.7 16.2 14.7 12.2C14.7 11.7 14.7 11.4 14.6 11H8Z" />
                 </svg>
             </a>
-            <a class="link-button" href="mailto:lukaskoller6@gmail.com" target="_blank">
+            <!-- Mail Button -->
+            <a class="link-btn" href="mailto:lukaskoller6@gmail.com" target="_blank">
                 <!-- Mail Svg icon -->
                 <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="black">
                     <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM19.6 8.25L12.53 12.67C12.21 12.87 11.79 12.87 11.47 12.67L4.4 8.25C4.15 8.09 4 7.82 4 7.53C4 6.86 4.73 6.46 5.3 6.81L12 11L18.7 6.81C19.27 6.46 20 6.86 20 7.53C20 7.82 19.85 8.09 19.6 8.25Z" />
@@ -57,21 +63,25 @@
             </a>
         </div>
     </header>
-    <!--Main Layout-->
-    <main id="content" class="mld-layout mdl-js-layout" ng-controller="appsController">
 
+    <!-- Main Layout -->
+    <main id="content" class="mdc-toolbar-fixed-adjust" ng-controller="appsController">
+        <!-- class="mld-layout mdl-js-layout" -->
         <p id="text-apps-head">My Apps</p>
-        <!--Apps Grid-->
-        <div class="mdl-grid" style="padding-bottom: 50px;">
-            <div ng-repeat="app in apps" class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-                <a href="{{app.gplaylink}}" target="_blank">
-                    <div class="mdl-card mdl-shadow--2dp app-card" style="width: 90%; margin: 32px auto 8px; position: relative;background: transparent">
-                        <img src="{{app.screenshot}}" style="width: 100%;" />
+        <!-- Apps Grid -->
+        <div class="mdc-layout-grid" style="padding-bottom: 50px;">
+            <div class="mdc-layout-grid__inner">
+                <div ng-repeat="app in apps" class="mdc-layout-grid__cell" style="width: 90%; margin: 32px auto 8px">
+                    <!--  -->
+                    <a href="{{app.gplaylink}}" target="_blank">
+                        <div class="mdc-card app-card">
+                            <img class="mdc-card__media" src="{{app.screenshot}}" style="width: 100%;" />
+                        </div>
+                    </a>
+                    <div align="right" style="padding-top: 8px;">
+                        <a class="app-link-btn" href="{{app.gplaylink}}" target="_blank">Google Play</a>
+                        <a class="app-link-btn" href="{{app.githublink}}" target="_blank">GitHub</a>
                     </div>
-                </a>
-                <div align="right" style="padding-right: 16px;">
-                    <a class="app-link-button" href="{{app.gplaylink}}" target="_blank">Google Play</a>
-                    <a class="app-link-button" href="{{app.githublink}}" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
@@ -79,8 +89,7 @@
         <a id="privacy-terms-link" href="privacy/privacy.html">Privacy and Terms</a>
     </main>
 
-    <!--js-->
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- js -->
     <script>
         angular.module("LukasKollerApps", []).controller('appsController', ['$scope', function ($scope) {
             $scope.apps = [
@@ -107,6 +116,36 @@
                 }
             ];
         }]);
+    </script>
+
+    <!-- Required MDC Web JavaScript library -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!-- Instantiate all the components rendered in the document -->
+    <script>
+        /* instantiate toolbar */
+        var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
+        toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
+        /* flex-listener */
+        toolbar.listen('MDCToolbar:change', function (evt) {
+            var flexibleExpansionRatio = evt.detail.flexibleExpansionRatio;
+            /* animate profile pic */
+            var profilepic = document.querySelector('#profile-pic');
+            profilepic.style.height = (80 * flexibleExpansionRatio.toFixed(2) + 48) + 'px';
+            profilepic.style.width = (80 * flexibleExpansionRatio.toFixed(2) + 48) + 'px';
+            profilepic.style.margin = (24 * flexibleExpansionRatio.toFixed(2) + 8) + 'px auto 0';
+            /* animate desc */
+            var textdesc = document.querySelector('#text-desc');
+            textdesc.style.fontSize = (14 * flexibleExpansionRatio.toFixed(2)) + 'px';
+            textdesc.style.opacity = flexibleExpansionRatio.toFixed(2) * flexibleExpansionRatio.toFixed(2);
+            /* animate link buttons */
+            var linkbtns = document.getElementsByClassName("link-btn");
+            for (var i = 0; i < linkbtns.length; i++) {
+                var icon = linkbtns[i].firstElementChild;
+                icon.setAttribute('height', (36 * flexibleExpansionRatio.toFixed(2)) + 'px');
+                icon.setAttribute('width', (36 * flexibleExpansionRatio.toFixed(2)) + 'px');
+                icon.setAttribute('opacity', flexibleExpansionRatio.toFixed(2) * flexibleExpansionRatio.toFixed(2));
+            }
+        });
     </script>
 </body>
 
