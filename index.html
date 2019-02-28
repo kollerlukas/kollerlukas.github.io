@@ -72,15 +72,21 @@
         <div class="mdc-layout-grid" style="padding-bottom: 50px;">
             <div class="mdc-layout-grid__inner">
                 <div ng-repeat="app in apps" class="mdc-layout-grid__cell" style="width: 90%; margin: 32px auto 8px">
-                    <!--  -->
-                    <a href="{{app.gplaylink}}" target="_blank">
-                        <div class="mdc-card app-card">
-                            <img class="mdc-card__media" src="{{app.screenshot}}" style="width: 100%;" />
-                        </div>
-                    </a>
+                    <div ng-switch="app.gplaylink">
+                        <a ng-switch-when="null" href="{{app.githublink}}" target="_blank">
+                            <div class="mdc-card app-card">
+                                <img class="mdc-card__media" src="{{app.screenshot}}" style="width: 100%;" />
+                            </div>
+                        </a>
+                        <a ng-switch-default href="{{app.gplaylink}}" target="_blank">
+                            <div class="mdc-card app-card">
+                                <img class="mdc-card__media" src="{{app.screenshot}}" style="width: 100%;" />
+                            </div>
+                        </a>
+                    </div>
                     <div align="right" style="padding-top: 8px;">
-                        <a class="app-link-btn" href="{{app.gplaylink}}" target="_blank">Google Play</a>
-                        <a class="app-link-btn" href="{{app.githublink}}" target="_blank">GitHub</a>
+                        <a class="app-link-btn" href="{{app.gplaylink}}" ng-hide="app.gplaylink == null" target="_blank">Google Play</a>
+                        <a class="app-link-btn" href="{{app.githublink}}" ng-hide="app.githublink == null" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -101,6 +107,13 @@
                     screenshot: "images/screenshots/camera-roll-screenshot.png"
                 },
                 {
+                    name: "Muzei Source: NASA APOD",
+                    gplaylink: null,
+                    githublink: "https://github.com/kollerlukas/NasaMuzei",
+                    githubreponame: "kollerlukas/NasaMuzei",
+                    screenshot: "https://github.com/kollerlukas/NasaMuzei/raw/master/screenshots/screenshot-main.png"
+                },
+                {
                     name: "TODOList",
                     gplaylink: "https://play.google.com/store/apps/details?id=us.koller.todolist",
                     githublink: "https://github.com/kollerlukas/TODOList-Android-App",
@@ -113,7 +126,7 @@
                     githublink: "https://github.com/assumption/ISS-Tracker",
                     githubreponame: "assumption/ISS-Tracker",
                     screenshot: "images/screenshots/iss-tracker-screenshot.png"
-                }
+                },
             ];
         }]);
     </script>
