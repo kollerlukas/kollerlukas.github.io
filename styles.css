@@ -77,8 +77,17 @@ html, body {
     background-color:rgba(0,0,0,0.1);
 }
 
+.app-name {
+    /* text-align: center; */
+    vertical-align: left;
+    color: #212121;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+}
+
 .app-link-btn {
-    font-size: 12px;
+    font-size: 11px;
     color: #000000;
     font-weight: bold;
     text-decoration: none;
@@ -121,7 +130,6 @@ html, body {
 }
 
 .app-card {
-    border-radius: 6px;
     /* for smooth hover animation */
     transition-property: box-shadow;
     transition-duration: 0.15s;
