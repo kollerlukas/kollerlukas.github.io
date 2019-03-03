@@ -1,58 +1,61 @@
 html, body {
     margin:0;
     height:100%;
-    background-color: #f5f5f5;
+    background-color: #111111;
     font-family: 'Roboto Mono', monospace;
+}
+
+#header {
+    display: inline;
 }
 
 #content {
     width: calc(100% - 32px); 
-    max-width: 1000px; 
-    margin: 0 auto; 
+    max-width: 800px; 
+    margin: 0 auto;
+    margin-top: 64px;
 }
 
 #text-name {
-    text-align: center;
-    vertical-align: middle;
-    color: #000000;
-    font-size: 20px; 
+    font-size: 24px; 
     font-weight: bold; 
-    margin: 8px auto 0;
+    color: #ffffff;
+    margin-top: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 8px;
+    vertical-align: middle;
 }
 
 #text-desc {
-    text-align: center;
     vertical-align: middle;
-    color: #9E9E9E;
+    color: #BDBDBD;
     font-size: 14px;
-    margin: 8 auto 0;
+    margin-top: 8px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+
+#link-btns {
+    float: right;
+    vertical-align: middle
 }
 
 #text-apps-head {
     text-align: center;
     vertical-align: middle;
-    color: #000000;
+    color: #ffffff;
     font-size: 20px;
     font-weight: bold;
-}
-
-#profile-pic {
-    width: 128px;
-    height: 128px;
-    background-size: 128px 128px;
-    display: block;
-    border-radius: 64px;
-    margin: 0px auto 0;
-    /* shadow */
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2),
-    0 1px 1px 0 rgba(0, 0, 0, .14),
-    0 2px 1px -1px rgba(0, 0, 0, .12);
+    margin-top: 64px;
 }
 
 .link-btn {
     width: 48px; 
     height: 48px; 
-    margin: 8px;
+    margin: 8px 8px;
+    vertical-align: middle;
     text-decoration: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -73,22 +76,43 @@ html, body {
 }
 
 .link-btn svg:hover {
-    fill: #424242;
-    background-color:rgba(0,0,0,0.1);
+    fill: #ffffff;
+    background-color:rgba(255,255,255,.1);
+}
+
+.app-card {
+    margin: 32px; 
+    padding-left: 16px; 
+    padding-top: 16px; 
+    padding-right: 16px; 
+    padding-bottom: 0; 
+    border-radius: 6px; 
+}
+
+.app-info {
+    /* width: calc(50% - 64px); */
+    /* min-width: calc(50% - 64px); */
+    /* margin: 32px; */
 }
 
 .app-name {
     /* text-align: center; */
     vertical-align: left;
-    color: #212121;
+    color: #ffffff;
     font-size: 16px;
     font-weight: bold;
-    padding: 8px;
+    margin-bottom: 32px;
+}
+
+.app-descr {
+    color: rgba(255,255,255,.6);
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .app-link-btn {
     font-size: 11px;
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
     text-decoration: none;
     border-radius: 4px;
@@ -106,16 +130,17 @@ html, body {
 }
 
 .app-link-btn:hover {
-    background-color:rgba(0,0,0,0.1);
+    background-color:rgba(255,255,255,.2);
 }
 
 #privacy-terms-link {
     float: right;
     font-size: 12px;
-    color: #424242;
+    color: #bdbdbd;
     font-weight: bold;
     border-radius: 4px;
     padding: 8px;
+    margin: 8px 8px;
     text-decoration: none;
     /* for smooth hover animation */
     transition-property: color, background-color;
@@ -125,20 +150,17 @@ html, body {
 }
 
 #privacy-terms-link:hover {
-    color: #212121;
-    background-color:rgba(0,0,0,0.1);
+    color: #ffffff;
+    background-color:rgba(255,255,255,.1);
 }
 
-.app-card {
-    /* for smooth hover animation */
-    transition-property: box-shadow;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-    transition-delay: initial;
-}
-
-.app-card:hover {
-    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, .2),
-    0 8px 10px 0 rgba(0, 0, 0, .14),
-    0 2px 20px 0 rgba(0, 0, 0, .12)
+.app-screenshot {
+    margin-left: 0;
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-right: 0;
+    margin-bottom: 0;
+    box-shadow: 0 12px 24px -6px rgba(17, 17, 17, .2),
+    0 24px 30px 0 rgba(17, 17, 17, .14),
+    0 6px 60px 0 rgba(17, 17, 17, .12);
 }

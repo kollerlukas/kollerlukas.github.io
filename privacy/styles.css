@@ -1,7 +1,7 @@
 html, body {
     margin:0;
     height:100%;
-    background-color: #F5F5F5;
+    background-color: #111111;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -16,7 +16,7 @@ html, body {
 
 h1, h2, h3 {
     font-family: 'Roboto Mono', monospace;
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
     margin: 0;
 }
@@ -34,14 +34,14 @@ h3 {
 }
 
 a {
-    color: #000000;
+    color: #ffffff;
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
 }
 
 p {
-    color: #9E9E9E;
+    color: #bdbdbd;
     font-size: 12px;
     font-weight: bold;
 }
