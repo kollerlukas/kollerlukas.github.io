@@ -57,12 +57,12 @@
 
         <p id="text-apps-head">MY APPS</p>
         <!-- Apps Grid -->
-        <div style="padding-bottom: 50px;">
+        <div style="padding-bottom: 32px;">
             <div ng-repeat="app in apps" class="app-card" style="background-color: {{app.cardbg}};">
                 <div class="mdc-layout-grid" style="overflow: hidden;">
                     <div class="mdc-layout-grid__inner" style="width: 100%;">
                         <div
-                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone app-info">
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
                             <!-- app name -->
                             <h1 class="app-name">{{app.name}}</h1>
                             <!-- app description -->
@@ -78,18 +78,24 @@
                             </div>
                         </div>
 
-                        <div style="max-width: 300px;"
-                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone app-screenshot">
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone"
+                            style="max-height: 300px;">
                             <a href="{{app.downloadlink}}" target="_blank">
-                                <img src="{{app.screenshot}}" style="width: 100%; margin-bottom: -256px; border-radius: 6px 6px 0 0;" />
+                                <img src="{{app.screenshot}}" class="app-screenshot" />
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Privacy and Terms link -->
-        <a id="privacy-terms-link" href="privacy/privacy.html">Privacy and Terms</a>
+        <div style="float: right; margin: 8px;">
+            <div style="display: inline;">
+                <!-- website source code link -->
+                <a id="code-link-btn" href="https://github.com/kollerlukas/kollerlukas.github.io">Source Code</a>
+                <!-- Privacy and Terms link -->
+                <a id="privacy-terms-link" href="privacy/privacy.html">Privacy and Terms</a>
+            </div>
+        </div>
     </main>
 
     <!-- js -->
@@ -97,6 +103,7 @@
         angular.module("LukasKollerApps", []).controller('appsController', ['$scope', function ($scope) {
             $scope.apps = [
                 {
+                    icon: "https://github.com/kollerlukas/Camera-Roll-Android-App/raw/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
                     name: "Camera Roll",
                     descr: "Camera Roll is the perfect Gallery App to enjoy your photos, gifs and videos.",
                     gplaylink: "https://play.google.com/store/apps/details?id=us.koller.cameraroll",
@@ -107,6 +114,7 @@
                     cardbg: "#383840",
                 },
                 {
+                    icon: "https://github.com/kollerlukas/NasaMuzei/raw/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
                     name: "Muzei Source: NASA APOD",
                     descr: "Simple Muzei Source providing the Astronomy Picture of the Day by NASA.",
                     gplaylink: null,
@@ -117,6 +125,7 @@
                     cardbg: "#089090",
                 },
                 {
+                    icon: "https://github.com/kollerlukas/TODOList-Android-App/raw/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
                     name: "TODOList",
                     descr: "TODOList is a simple To-do list, which manages your Tasks (TODOs). Coded with beautiful, unique, and delightful Material Design.",
                     gplaylink: "https://play.google.com/store/apps/details?id=us.koller.todolist",
@@ -127,6 +136,7 @@
                     cardbg: "#e84078",
                 },
                 {
+                    icon: "https://github.com/assumption/ISS-Tracker/raw/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
                     name: "ISS Tracker",
                     descr: "The ISS Tracker app lets you track the position of the International Space Station in several ways. View a model of the ISS and its position relative to Earth, view a detailed map of Earth where the ISS is above, watch an ISS livestream, and step aboard the ISS itself in cardboard mode!",
                     gplaylink: "https://play.google.com/store/apps/details?id=edu.calpoly.isstracker",
