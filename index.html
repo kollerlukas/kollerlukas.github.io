@@ -26,10 +26,11 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- Vue.js -->
-    <!-- development version, includes helpful console warnings -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <!-- development version -->
+    <!-- <script src="https://unpkg.com/vue"></script> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <!-- production version -->
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
 
 <body>
@@ -42,12 +43,12 @@
                     <!-- GitHub Profile Button -->
                     <a class="icon-link-btn" href="https://github.com/kollerlukas" target="_blank">
                         <!-- GitHub Svg icon -->
-                        <svg-icon v-bind:svg="github" v-key="github.id"></svg-icon>
+                        <svg-icon v-bind:svg="icons.github"></svg-icon>
                     </a>
                     <!-- Mail Button -->
                     <a class="icon-link-btn" href="mailto:lukaskoller6@gmail.com" target="_blank">
                         <!-- Mail Svg icon -->
-                        <svg-icon v-bind:svg="mail" v-key="mail.id"></svg-icon>
+                        <svg-icon v-bind:svg="icons.mail"></svg-icon>
                     </a>
                 </div>
                 <h1 id="text-name">LUKAS KOLLER</h1>
@@ -78,13 +79,13 @@
                                 <!-- tags -->
                                 <div align="right" style="display: inline;">
                                     <!-- Android icon -->
-                                    <svg-icon v-if="app.android" v-bind:svg="android" v-key="android.id"></svg-icon>
+                                    <svg-icon v-if="app.android" v-bind:svg="icons.android"></svg-icon>
                                     <!-- ios icon -->
-                                    <svg-icon v-if="app.ios" v-bind:svg="ios" v-key="ios.id"></svg-icon>
+                                    <svg-icon v-if="app.ios" v-bind:svg="icons.ios"></svg-icon>
                                     <!-- Flutter icon -->
-                                    <svg-icon v-if="app.flutter" v-bind:svg="flutter" v-key="flutter.id"></svg-icon>
+                                    <svg-icon v-if="app.flutter" v-bind:svg="icons.flutter"></svg-icon>
                                     <!-- Kotlin icon -->
-                                    <svg-icon v-if="app.kotlin" v-bind:svg="kotlin" v-key="kotlin.id"></svg-icon>
+                                    <svg-icon v-if="app.kotlin" v-bind:svg="icons.kotlin"></svg-icon>
                                 </div>
                             </div>
 
@@ -109,8 +110,13 @@
         </div>
     </main>
 
+    <!-- load data -->
+    <script type="text/javascript" src="js/data/myapps.js"></script>
+    <script type="text/javascript" src="js/data/icons.js"></script>
+    <!-- register svg-icon component -->
+    <script type="text/javascript" src="js/icons-comp.js"></script>
     <!-- load vue app js -->
-    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
     <!-- Required MDC Web JavaScript library -->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
