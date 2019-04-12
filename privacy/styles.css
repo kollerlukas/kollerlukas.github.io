@@ -7,10 +7,7 @@ html, body {
 
 #content {
     max-width: 1000px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 32px 16px;
     margin: auto;
 }
 
