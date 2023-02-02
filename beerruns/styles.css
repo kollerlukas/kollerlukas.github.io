@@ -8,7 +8,7 @@ html, body {
 #content {
     max-width: 1000px;
     padding: 32px 16px;
-    margin: 1em auto;
+    margin: auto;
 }
 
 iframe {
